@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace GridSingle
 {
@@ -62,6 +63,8 @@ namespace GridSingle
         {
             
             int ans = arr[x, y] + arr[x - 1, y - 1] + arr[x, y - 1] + arr[x + 1, y - 1] + arr[x - 1, y] + arr[x + 1, y] + arr[x - 1, y + 1] + arr[x, y + 1] + arr[x + 1, y + 1];
+
+            Thread.Sleep((ans % 11 * 1500)/1000);
 
             if (ans % 10 == 0)
             {
